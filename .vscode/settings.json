@@ -1,0 +1,10 @@
+{
+    "chat.mcp.serverSampling": {
+        "MCP_Practice/.vscode/mcp.json: kubernetes": {
+            "allowedModels": [
+                "copilot/auto",
+                "copilot/claude-sonnet-4.5"
+            ]
+        }
+    }
+}
