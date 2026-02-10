@@ -288,17 +288,22 @@ def ask_ai(context):
     prompt = f"""
 You are a Kubernetes SRE AI.
 
-Analyze the cluster problem and recommend action.
+Analyze the cluster issues below and decide if pods should be restarted.
 
 Cluster data:
 {json.dumps(context, indent=2)}
 
-Respond ONLY in valid JSON:
+Rules:
+- CrashLoopBackOff pods should usually be restarted
+- HighRestartCount pods (>5 restarts) need investigation but can be restarted
+- Respond with valid action: "restart" or "ignore"
+
+Respond ONLY with this exact JSON format:
 
 {{
-  "problem": "...",
-  "action": "restart | diagnose | ignore",
-  "reason": "..."
+  "problem": "brief description",
+  "action": "restart",
+  "reason": "why this action"
 }}
 """
     try:
@@ -309,44 +314,39 @@ Respond ONLY in valid JSON:
                 "prompt": prompt,
                 "stream": False
             },
-            timeout=30
+            timeout=60
         )
         
-        # Handle Ollama API response
         resp_data = r.json()
-        
-        # Debug: print raw response
-        print(f"DEBUG - Ollama raw response: {resp_data}")
-        
-        # The response text is in the "response" key
         response_text = resp_data.get("response", "")
+        
         if not response_text:
             print("AI error: Empty response from Ollama")
             return None
         
-        # Extract JSON from the response text
-        # Ollama models sometimes add extra text, so find the JSON part
+        # Remove markdown code blocks (```json ... ``` or ``` ... ```)
+        import re
+        response_text = re.sub(r'^```(?:json)?\s*\n', '', response_text)
+        response_text = re.sub(r'\n```\s*$', '', response_text)
+        response_text = response_text.strip()
+        
+        # Try direct JSON parsing
         try:
-            # Try direct JSON parsing first
             return json.loads(response_text)
         except json.JSONDecodeError:
-            # If that fails, try to find JSON in the text
-            import re
-            json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+            # Try finding JSON object in text
+            json_match = re.search(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', response_text, re.DOTALL)
             if json_match:
-                return json.loads(json_match.group())
-            else:
-                print(f"AI error: No valid JSON in response: {response_text[:200]}")
-                return None
+                try:
+                    return json.loads(json_match.group())
+                except:
+                    pass
+            
+            print(f"AI error: Could not parse JSON from: {response_text[:200]}")
+            return None
     
-    except requests.exceptions.Timeout:
-        print("AI error: Ollama request timeout")
-        return None
-    except requests.exceptions.ConnectionError:
-        print("AI error: Cannot connect to Ollama")
-        return None
     except Exception as e:
-        print(f"AI error: {type(e).__name__}: {e}")
+        print(f"AI error: {type(e).__name__}: {str(e)[:200]}")
         return None
 
 
@@ -450,12 +450,13 @@ def detect_and_fix():
 
     print(" AI decision:", ai)
 
-    if ai["action"] != "restart":
-        print(" AI chose not to restart pods")
-        return
-
-    for p in problems:
-        restart_pod(p["namespace"], p["pod"])
+    action = ai.get("action", "").lower()
+    if action == "restart" or "restart" in action:
+        print(f" Restarting {len(problems)} problematic pods...")
+        for p in problems:
+            restart_pod(p["namespace"], p["pod"])
+    else:
+        print(f" AI chose action '{action}' - skipping restart")
 
 
 # ---------------------------------------------------
