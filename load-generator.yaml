@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: load-generator
+spec:
+  replicas: 3  # Create fluctuation with multiple pods
+  selector:
+    matchLabels:
+      app: load-test
+  template:
+    metadata:
+      labels:
+        app: load-test
+    spec:
+      containers:
+      - name: stress
+        image: polinux/stress
+        command: ["/bin/sh"]
+        args:
+          - -c
+          - |
+            while true; do
+              echo "High load phase..."
+              stress --cpu 2 --timeout 30s
+              echo "Low load phase..."
+              sleep 30
+            done
+        resources:
+          limits:
+            memory: "200Mi"
+            cpu: "1000m"
+          requests:
+            memory: "100Mi"
+            cpu: "500m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memory-waves
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: memory-test
+  template:
+    metadata:
+      labels:
+        app: memory-test
+    spec:
+      containers:
+      - name: memory-stress
+        image: polinux/stress
+        command: ["/bin/sh"]
+        args:
+          - -c
+          - |
+            while true; do
+              echo "Allocating 150MB..."
+              stress --vm 1 --vm-bytes 150M --timeout 20s
+              sleep 10
+              echo "Allocating 100MB..."
+              stress --vm 1 --vm-bytes 100M --timeout 20s
+              sleep 10
+            done
+        resources:
+          limits:
+            memory: "300Mi"
+            cpu: "500m"
+          requests:
+            memory: "100Mi"
+            cpu: "200m"

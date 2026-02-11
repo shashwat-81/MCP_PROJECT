@@ -1,0 +1,178 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-memory-leak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-leak
+  template:
+    metadata:
+      labels:
+        app: java-leak
+    spec:
+      containers:
+      - name: java-app
+        image: openjdk:11-jre-slim
+        command: ["/bin/sh"]
+        args:
+          - -c
+          - |
+            cat > MemoryLeak.java << 'EOF'
+            import java.util.*;
+            public class MemoryLeak {
+                static List<byte[]> list = new ArrayList<>();
+                public static void main(String[] args) throws Exception {
+                    System.out.println("Starting Java app with memory leak...");
+                    while(true) {
+                        list.add(new byte[10 * 1024 * 1024]);
+                        System.out.println("Allocated memory, list size: " + list.size());
+                        Thread.sleep(1000);
+                    }
+                }
+            }
+            EOF
+            javac MemoryLeak.java
+            java -Xmx128m MemoryLeak
+        resources:
+          limits:
+            memory: "150Mi"
+            cpu: "200m"
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wrong-image-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wrong-image
+  template:
+    metadata:
+      labels:
+        app: wrong-image
+    spec:
+      containers:
+      - name: app
+        image: nonexistent/fake-image:v1.0.0
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "50m"
+          limits:
+            memory: "100Mi"
+            cpu: "100m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-crash
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-crash
+  template:
+    metadata:
+      labels:
+        app: python-crash
+    spec:
+      containers:
+      - name: python-app
+        image: python:3.9-slim
+        command: ["/bin/sh"]
+        args:
+          - -c
+          - |
+            cat > app.py << 'EOF'
+            import sys
+            import time
+            
+            print("Starting Python application...")
+            print("Attempting to connect to database...")
+            
+            time.sleep(2)
+            
+            raise ConnectionError("Cannot connect to database at db.example.com:5432 - connection refused")
+            EOF
+            python app.py
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "50m"
+          limits:
+            memory: "100Mi"
+            cpu: "100m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: missing-config
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: missing-config
+  template:
+    metadata:
+      labels:
+        app: missing-config
+    spec:
+      containers:
+      - name: app
+        image: busybox:latest
+        command: ["/bin/sh"]
+        args:
+          - -c
+          - |
+            echo "Starting application..."
+            echo "Checking required environment variables..."
+            
+            if [ -z "$DATABASE_URL" ]; then
+              echo "ERROR: DATABASE_URL environment variable is not set"
+              echo "Application cannot start without database configuration"
+              exit 1
+            fi
+            
+            echo "Application started successfully"
+            sleep 3600
+        env:
+        - name: APP_NAME
+          value: "test-app"
+        resources:
+          requests:
+            memory: "25Mi"
+            cpu: "25m"
+          limits:
+            memory: "50Mi"
+            cpu: "50m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resource-hog
+spec:
+  replicas: 20
+  selector:
+    matchLabels:
+      app: resource-hog
+  template:
+    metadata:
+      labels:
+        app: resource-hog
+    spec:
+      containers:
+      - name: app
+        image: nginx:alpine
+        resources:
+          requests:
+            memory: "500Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"

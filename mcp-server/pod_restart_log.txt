@@ -1,0 +1,2729 @@
+
+================================================================================
+Timestamp: 2026-02-11 13:01:29
+Namespace: default
+Pod: java-memory-leak-d89dd6c7-hxkrh
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:02:06
+Namespace: default
+Pod: missing-config-6dc7f7985d-9qlbj
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:02:18
+Namespace: default
+Pod: python-crash-7b54b6455d-h4kgr
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to missing or incorrect image configuration in the container spec",
+  "fix_type": "image",
+  "fix_action": "Verify and update the 'docker pull' command with correct image name, tag if necessary. Ensure Docker daemon has access rights.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Verify and update the 'docker pull' command with correct image name, tag if necessary. Ensure Docker daemon has access rights.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:02:30
+Namespace: default
+Pod: resource-hog-5f856f6c69-2wvfw
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient resources (CPU and memory)",
+  "fix_type": "resources",
+  "fix endpoints": [
+    {
+      "endpoint": "/api/v1/adjust-resource"
+    }
+  ],
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:02:42
+Namespace: default
+Pod: resource-hog-5f856f6c69-7czdl
+Issue Detected: PodPending
+Action Taken: STANDALONE_POD_NO_DELETE
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:02:56
+Namespace: default
+Pod: resource-hog-5f856f6c69-7lp8t
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "PodPending due to failed ImagePullBackOff suggesting that container image is not being downloaded or pulled from the registry",
+  "fix_type": "image",
+  "fixin.action": "Ensure proper connectivity between Kubernetes and Docker registries, check if necessary pull secrets are set correctly in pod definition.",
+  "should_restart": false,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:03:13
+Namespace: default
+Pod: resource-hog-5f856f6c69-cjjv2
+Issue Detected: PodPending
+Action Taken: STANDALONE_POD_NO_DELETE
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:03:24
+Namespace: default
+Pod: resource-hog-5f856f6c69-fcltf
+Issue Detected: PodPending
+Action Taken: MANUAL_RESOURCE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient memory leading to OOM (Out of Memory) conditions",
+  "fix_type": "resources",
+  "fixinage action": "Adjust the container's resource requests and limits in the pod specification, particularly increasing CPU and memory specifications.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:03:33
+Namespace: default
+Pod: resource-hog-5f856f6c69-fwgrx
+Issue Detected: PodPending
+Action Taken: MANUAL_RESOURCE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient CPU resources for the pod leading to a scheduling failure.",
+  "fix_type": "resources",
+  "fixin action": "Set resource requests and limits in your deployment YAML file, ensuring they are adequate for 'resource-hog' workload.",
+  "should_restart": false,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:03:43
+Namespace: default
+Pod: resource-hog-5f856f6c69-gsm7z
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "OOMKilled due to insufficient memory allocation for the pod's demands",
+  "fix_type": "resources",
+  "fix_action": "Increase resources allocated to this container by updating its resource requests and limits in the deployment manifest or as a command-line override when creating new jobs.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase resources allocated to this container by updating its resource requests and limits in the deployment manifest or as a command-line override when creating new jobs.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:03:48
+Namespace: default
+Pod: resource-hog-5f856f6c69-hpz4c
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:03:59
+Namespace: default
+Pod: resource-hog-5f856f6c69-lzjpp
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:04:09
+Namespace: default
+Pod: resource-hog-5f856f6c69-ngnlt
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Out of memory due to resource requests not being adedequately met by the system's resources",
+  "fix_type": "resources",
+  "fix_action": "Update container spec with lower CPU and memory requirements, scale down replicas in Deployment or set ResourceRequest/Limits appropriately for your workload needs.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Update container spec with lower CPU and memory requirements, scale down replicas in Deployment or set ResourceRequest/Limits appropriately for your workload needs.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:04:20
+Namespace: default
+Pod: resource-hog-5f856f6c69-ph9hp
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "PodPending due to ImagePullBackOff caused by unreachable Docker image repository or wrong credentials",
+  "fix_type": "image",
+  "fix_action": "Verify the availability and accessibility of your container images. Check for any misconfigurinations in docker-related settings like registry URL, authentication tokens etc.",
+  "should_restart": false,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Verify the availability and accessibility of your container images. Check for any misconfigurinations in docker-related settings like registry URL, authentication tokens etc.
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:04:28
+Namespace: default
+Pod: resource-hog-5f856f6c69-rz2fg
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Pod not scheduling due to insufficient CPU resources",
+  "fix_type": "resources",
+  "fix_action": "Increase the cpuRequest and limit values in the pod's resource requests, e.g., by setting 'cpu: 500m'"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase the cpuRequest and limit values in the pod's resource requests, e.g., by setting 'cpu: 500m'
+Severity: N/A
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:04:42
+Namespace: default
+Pod: resource-hog-5f856f6c69-tm5kx
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:04:50
+Namespace: default
+Pod: resource-hog-5f856f6c69-vmwkp
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to an unreachable or incorrect repository URL",
+  "fix_type": "image",
+  "fix_action": "Update the image pull secret with a valid Docker registry access credentials and ensure that the container's base image is accessible from within your Kubernetes cluster.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Update the image pull secret with a valid Docker registry access credentials and ensure that the container's base image is accessible from within your Kubernetes cluster.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:04:58
+Namespace: default
+Pod: resource-hog-5f856f6c69-wzn7g
+Issue Detected: PodPending
+Action Taken: MANUAL_REVIEW_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "issue": "PodPending",
+  "logs": "Failed to fetch logs",
+  "describe": "Failed to fetch description"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: N/A
+Fix Action: N/A
+Severity: N/A
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:05:07
+Namespace: default
+Pod: resource-hog-5f856f6c69-x2l5p
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to inaccessible Docker image repository",
+  "fix_type": "image",
+  "fixinageAction": "Check and correct the configuration of your container registry or ensure that you have internet access. Also, verify if the specified image is present on a private/public repository.",
+  "shouldRestart": true,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: N/A
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:05:18
+Namespace: default
+Pod: resource-hog-5f856f6c69-xlljf
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "OOMKilled due to insufficient memory allocation for the pod's container",
+  "fix_type": "resources",
+  "fix_action": "Increase the resources allocated (e.g., 'memory:' and 'cpu-guaranteed:') in your Kubernetes Deployment/ReplicaSet or Service object configuration, ensuring they meet the demands of resource-hog pods.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase the resources allocated (e.g., 'memory:' and 'cpu-guaranteed:') in your Kubernetes Deployment/ReplicaSet or Service object configuration, ensuring they meet the demands of resource-hog pods.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:05:33
+Namespace: default
+Pod: resource-hog-5f856f6c69-xp9cl
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:05:43
+Namespace: default
+Pod: resource-hog-5f856f6c69-xsv89
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "PodPending due to ineffective resource requests causing Pod eviction",
+  "fix_type": "resources",
+  "fixin fx_action": "Update the pod's ResourceRequest and Limit, ensuring they match or exceed what is required by this workload.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:05:57
+Namespace: default
+Pod: resource-hog-5f856f6c69-zmgqc
+Issue Detected: PodPending
+Action Taken: STANDALONE_POD_NO_DELETE
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Resource limitations and application inefficiency leading to resource exhaustion",
+  "fix_type": "resources, app_code",
+  "fix_action": {
+    "for resources": "Adjust memory requests/limits for the pod using 'kubectl edit' or modify '-p limit', and review any inefficient Kubernetes resource usage patterns.",
+    "for app_code": "Optimize application code to reduce CPU and memory consumption, potentially by refactoring algorithms that are causing bottlenercks."
+  },
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources, app_code
+Fix Action: {'for resources': "Adjust memory requests/limits for the pod using 'kubectl edit' or modify '-p limit', and review any inefficient Kubernetes resource usage patterns.", 'for app_code': 'Optimize application code to reduce CPU and memory consumption, potentially by refactoring algorithms that are causing bottlenercks.'}
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:06:07
+Namespace: default
+Pod: wrong-image-app-89c85955b-tplbp
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:06:35
+Namespace: default
+Pod: java-memory-leak-d89dd6c7-t5ghg
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Out of memory error as indicated by the logs suggesting 'Failed to fetch logs' due to a potential Java Memory Leak",
+  "fix_type": "resources",
+  "fix endpoints": [
+    {
+      "endpoint": "/exec/containers/{pod}/{container}:get-logs"
+    },
+    {
+      "endpoint": "/exec/containers/{pod}/{container}:log-inspect"
+    }
+  ],
+  "fix_action": "Increase memory limits for the Java container in Kubernetes settings",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase memory limits for the Java container in Kubernetes settings
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:06:49
+Namespace: default
+Pod: missing-config-6dc7f7985d-t4vt7
+Issue Detected: HighRestartCount
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to inaccessible Docker image registry or network connectivity issue",
+  "fix_type": "image",
+  "fixdependent_actions": [
+    {
+      "check_docker_registry": true,
+      "verify_network_connectivity": true
+    }
+  ],
+  "should_restart": false,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: N/A
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:07:00
+Namespace: default
+Pod: python-crash-7b54b6455d-h4kgr
+Issue Detected: CrashLoopBackOff
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Out of memory error in the container causing it to exit and restart frequently.",
+  "fix_type": "resources",
+  "fixin action": "'kubectl edit pod python-crash-7b54b6455d-h4kgr -n default' then 'spec.containers[0].resources.requests.memory = '2Gi'.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:07:09
+Namespace: default
+Pod: python-crash-7b54b6455d-h4kgr
+Issue Detected: HighRestartCount
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to unreachable Docker image",
+  "fix_type": "image",
+  "fix_action": "Check the availability and reach of the specified container registry, ensure that it is properly mounted as a volume in the pod's specification.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Check the availability and reach of the specified container registry, ensure that it is properly mounted as a volume in the pod's specification.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:07:18
+Namespace: default
+Pod: resource-hog-5f856f6c69-6blfk
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "PodPending due to resource requests not being met by available resources in the Kubernetes cluster",
+  "fix_type": "resources",
+  "fixin_action": "Adjust and increase memory request/limit for the pod using 'kubectl edit' or update YAML file, ensure sufficient CPU assigned if needed.",
+  "should_restart": false,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:07:28
+Namespace: default
+Pod: resource-hog-5f856f6c69-7lp8t
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to unreachable container image",
+  "fix_type": "image",
+  "fix_action": "Ensure the correct and reachable repository URL for images is specified in PodSpec under 'spec.containers[].image', ensure proper network connectivity, or check if any necessary authentication steps have been skipped.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Ensure the correct and reachable repository URL for images is specified in PodSpec under 'spec.containers[].image', ensure proper network connectivity, or check if any necessary authentication steps have been skipped.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:07:41
+Namespace: default
+Pod: resource-hog-5f856f6c69-9xj2m
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "The actual root cause of the pod failure is that it's experiencing resource pressure - specifically a lack of memory and possibly CPU throttling, as indicated by log messages mentioning 'Out of memory', or if such logs were not provided but similar errors are common for this issue.",
+  "fix_type": "resources",
+  "fix_action": "Increase the resource limits (both memory and potentially CPU) in your pod's definition to accommodate its needs, ensuring that it has enough resources available when scheduled on a node.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase the resource limits (both memory and potentially CPU) in your pod's definition to accommodate its needs, ensuring that it has enough resources available when scheduled on a node.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:07:56
+Namespace: default
+Pod: resource-hog-5f856f6c69-gsm7z
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient CPU and memory resources leading to container being terminated by the system.",
+  "fix_type": "resources",
+  "fixdeer-action": "Adjust resource requests in YAML file: 'minimumRlimit' for more accurate allocation, increase cpuReservation/cpuLimit values if necessary or request a higher priority tier (preemptible nodes) to ensure adequate resources.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:08:23
+Namespace: default
+Pod: resource-hog-5f856f6c69-lxbpj
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:08:42
+Namespace: default
+Pod: resource-hog-5f856f6c69-ngnlt
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Kubernetes failed to pull required image from a registry, likely because it is not accessible or network issues are present.",
+  "fix_type": "image",
+  "fix_action": "Ensure that the Kubernetes cluster has access rights and proper networking configuration for pulling images from the specified repository. Check if the Docker daemon'ner is running properly, verify DNS resolution within your pods/minions, ensure you are using an appropriate tag for image names (not label selectors), confirm whether firewall or network ACL rules permit traffic needed to pull this specific container.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Ensure that the Kubernetes cluster has access rights and proper networking configuration for pulling images from the specified repository. Check if the Docker daemon'ner is running properly, verify DNS resolution within your pods/minions, ensure you are using an appropriate tag for image names (not label selectors), confirm whether firewall or network ACL rules permit traffic needed to pull this specific container.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:08:55
+Namespace: default
+Pod: resource-hog-5f856f6c69-r7rt5
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:09:05
+Namespace: default
+Pod: resource-hog-5f856f6c69-rz2fg
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to UnhealthyDockerDaemon",
+  "fix_type": "image",
+  "fix_action": "Health check the Docker daemon and ensure it is running properly.",
+  "should_restart": false,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Health check the Docker daemon and ensure it is running properly.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:09:16
+Namespace: default
+Pod: resource-hog-5f856f6c69-wzn7g
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "The pod is experienner resource starvation leading to OOM errors",
+  "fix_type": "resources",
+  "fix_action": "Adjust the Resource requests and limits for your deployment, e.g., set memoryRequest field in a Pod's specification.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Adjust the Resource requests and limits for your deployment, e.g., set memoryRequest field in a Pod's specification.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:09:49
+Namespace: default
+Pod: resource-hog-5f856f6c69-xsv89
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:10:02
+Namespace: default
+Pod: resource-hog-679dd9955c-4qz54
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient CPU resources leading to application code errors due to inefficient parallel processing",
+  "fix_type": "resources",
+  "fix endpoints": [
+    {
+      "name": "request an increase for the resource limit on this pod's node or set a lower usage threshold using taint toleration policy"
+    }
+  ],
+  "should_restart": false,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:10:25
+Namespace: default
+Pod: resource-hog-679dd9955c-567zs
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "The actual root cause is not directly provided in the pod diagnostic data; however, based on typical scenarios that could lead to 'PodPending' status and considering there are no specific error messages about resources or image pull issues from logs/describe output we can infer potential causes such as excessive resource consumption by this particular Pod (possibly due to a misconfigured job template) not enough memory, CPU throttling because of other jobs consuming all available resources on the node where it's scheduled.",
+  "fix_type": "resources",
+  "fix_action": "Review and optimize resource requests in CronJob definition for this Pod to ensure that sufficient Kubernetes scheduling quota is respected. Consider implementing pod disruption budgets or scaling policies if necessary, based on the workload requirements.",
+  "should_restart": true,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Review and optimize resource requests in CronJob definition for this Pod to ensure that sufficient Kubernetes scheduling quota is respected. Consider implementing pod disruption budgets or scaling policies if necessary, based on the workload requirements.
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:10:38
+Namespace: default
+Pod: resource-hog-679dd9955c-77ndn
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to missing image pull secrets in the pod specification",
+  "fix_type": "image",
+  "fix_action": "Ensure that all necessary kube-system service accounts have access to the private registry where your application' endpoints are located. Create a secret for these credentials using `kubectl create secret docker-secret ...` and reference it in your pod specification.",
+  "should_restart": true,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Ensure that all necessary kube-system service accounts have access to the private registry where your application' endpoints are located. Create a secret for these credentials using `kubectl create secret docker-secret ...` and reference it in your pod specification.
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:10:47
+Namespace: default
+Pod: resource-hog-679dd9955c-lvg84
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "OOMKilled due to insufficient memory allocation for the pod",
+  "fix_type": "resources",
+  "fix_action": "Increase resource limits in Kubernetes configuration and/or specify higher requested resources when creating or updating a Pod spec.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase resource limits in Kubernetes configuration and/or specify higher requested resources when creating or updating a Pod spec.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:10:56
+Namespace: default
+Pod: resource-hog-679dd9955c-n2q8x
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:11:06
+Namespace: default
+Pod: resource-hog-679dd9955c-nksdx
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "CPU throttling due to resource limits set too low for the workload",
+  "fix_type": "resources",
+  "fix_action": "Increase CPU and memory requests in pod specification.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase CPU and memory requests in pod specification.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:11:16
+Namespace: default
+Pod: resource-hog-679dd9955c-t2tbh
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "PodPending due to inadedequate resources causing ImagePullBackOff",
+  "fix_type": "resources",
+  "fix_action": "Increase resource limits for the container and try again.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase resource limits for the container and try again.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:11:31
+Namespace: default
+Pod: resource-hog-679dd9955c-tkw96
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Out of memory error due to resource requirements not being met by the allocated resources.",
+  "fix_type": "resources",
+  "fixin fx action": "Adjust the replica count and limits for CPU, Memory (e.g., 'cpu' and 'memory') in the Deployment YAML file or via a Kubernetes command to allocate more appropriate amounts of resources.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:11:45
+Namespace: default
+Pod: resource-hog-679dd9955c-v9g2l
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient CPU resources leading to pod throttling and subsequent failure.",
+  "fix_type": "resources",
+  "fixinFix_action": "Adjust resource requests in the deployment YAML file, specifically requesting more guaranteed memory quota for your containers. Consider using a smaller container image that is less demanding on resources if appropriate.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:11:56
+Namespace: default
+Pod: resource-hog-679dd9955c-vkj2f
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Container is not ready because it cannot pull the required Docker image",
+  "fix_type": "image",
+  "fixdependentvariables": [
+    "DockerRegistryEndpoint"
+  ],
+  "fix_action": "Ensure that `DockerRegistryEndpoint` variable contains a valid and reachable registry endpoint. Check for network connectivity issues.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Ensure that `DockerRegistryEndpoint` variable contains a valid and reachable registry endpoint. Check for network connectivity issues.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:12:11
+Namespace: default
+Pod: wrong-image-app-89c85955b-nbqmk
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:12:37
+Namespace: default
+Pod: java-memory-leak-6767786f5d-j6g7n
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:12:51
+Namespace: default
+Pod: java-memory-leak-d89dd6c7-t5ghg
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:13:11
+Namespace: default
+Pod: missing-config-6dc7f7985d-t4vt7
+Issue Detected: CrashLoopBackOff
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "The pod is receiving Out of memory (OOM) error",
+  "fix_type": "resources",
+  "fix_action": "Increase the resource limits for the container in the deployment or set up a node with adeguate resources and specify it using NodeAffinity.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase the resource limits for the container in the deployment or set up a node with adeguate resources and specify it using NodeAffinity.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:13:28
+Namespace: default
+Pod: missing-config-6dc7f7985d-t4vt7
+Issue Detected: HighRestartCount
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient resources (memory and CPU), possibly exacerbated by resource misconfiguration",
+  "fix_type": "resources, config",
+  "fix_action": {
+    "for_config": "Ensure all required environment variables are set in the Deployment manifest or as Kubernetes secrets.",
+    "for_image": "Confirm that base images used for containers have been tagged and can be pulled from their repository, update image tags if necessary."
+  },
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources, config
+Fix Action: {'for_config': 'Ensure all required environment variables are set in the Deployment manifest or as Kubernetes secrets.', 'for_image': 'Confirm that base images used for containers have been tagged and can be pulled from their repository, update image tags if necessary.'}
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:13:39
+Namespace: default
+Pod: python-crash-7b54b6455d-h4kgr
+Issue Detected: CrashLoopBackOff
+Action Taken: STANDALONE_POD_NO_DELETE
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:13:49
+Namespace: default
+Pod: python-crash-7b54b6455d-h4kgr
+Issue Detected: HighRestartCount
+Action Taken: STANDALONE_POD_NO_DELETE
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:13:58
+Namespace: default
+Pod: python-crash-d7c47494f-59m8m
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to missing or incorrect Docker image information in the pod specification",
+  "fix_type": "image",
+  "fix_action": "Ensure that the specified Docker image exists and is accessible from within the cluster. Verify if there are any network policies preventing access, check for typos in the image repository path or tag.",
+  "should_restart": false,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Ensure that the specified Docker image exists and is accessible from within the cluster. Verify if there are any network policies preventing access, check for typos in the image repository path or tag.
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:14:07
+Namespace: default
+Pod: resource-hog-679dd9955c-4qz54
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient CPU allocated leading to application code errors within the container",
+  "fix_type": "resources",
+  "fixinlude_action": "Update pod specifications by increasing requests and limits for both memory (M) and CPU, ensuring they meet resource demands of the workload.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:14:21
+Namespace: default
+Pod: resource-hog-679dd9955c-567zs
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Critical: Memory pressure in the Kubernetes cluster has increased significantly due to a sudden increase in workload causing pods like 'resource-hog-679dd9955c-567zs' to exceed memory limits and get OOMKilled.",
+  "fix_type": "resources",
+  "fixin\u200c\u200b\u200b\u200c\u200bg_action": "Increase the resource requests for this specific pod using Kubernetes Horizontal Pod Autoscaler (HPA) or manually adjusting them in the deployment configuration to allocate more memory and CPU resources based on actual usage patterns.",
+  "should_restart": false,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:14:28
+Namespace: default
+Pod: resource-hog-679dd9955c-77ndn
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Out of memory error due to resource misconfiguration in container specs",
+  "fix_type": "resources",
+  "fix_action": "Increase the allocation for CPU and memory resources, ensuring they align with the requirements identified by the application'nerror logs.",
+  "should_restart": false,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase the allocation for CPU and memory resources, ensuring they align with the requirements identified by the application'nerror logs.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:14:39
+Namespace: default
+Pod: resource-hog-679dd9955c-cdlbp
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Resource constraints within the node leading to OOM (Out Of Memory)",
+  "fix_type": "resources",
+  "fixin action": [
+    "Increase memory allocation for the pod in its yaml file.",
+    "Upgrade cluster's infrastructure with higher resource capabilities."
+  ],
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:14:48
+Namespace: default
+Pod: resource-hog-679dd9955c-lvg84
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:14:59
+Namespace: default
+Pod: resource-hog-679dd9955c-nksdx
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:15:09
+Namespace: default
+Pod: resource-hog-679dd9955c-t2tbh
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient CPU resources causing the pod to enter a CrashLoopBackOff state",
+  "fix_type": "resources",
+  "fix_action": "Allocate more CPU and memory quota for this pod in its Kubernetes manifest or request higher limits via tainted nodes if necessary.",
+  "should_restart": true,
+  "severity": "high"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Allocate more CPU and memory quota for this pod in its Kubernetes manifest or request higher limits via tainted nodes if necessary.
+Severity: high
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:15:19
+Namespace: default
+Pod: resource-hog-679dd9955c-tkw96
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:15:28
+Namespace: default
+Pod: resource-hog-679dd9955c-v9g2l
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "The pod failed due to insufficient resources allocated for both CPU and memory.",
+  "fix_type": "resources",
+  "fix_action": "Update the container resource requests in your Kubernetes manifest file, increase them based on usage patterns or benchmarks.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Update the container resource requests in your Kubernetes manifest file, increase them based on usage patterns or benchmarks.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:15:38
+Namespace: default
+Pod: resource-hog-679dd9955c-vkj2f
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Insufficient resources leading to pod OOMKilled state due to memory pressure",
+  "fix_type": "resources",
+  "fix end:specific fix to apply": "Increase the resource limits for this container, specifically increasing memory allocation.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:16:13
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-2j2bl
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:16:22
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-5mbfv
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to unreachable container image repository",
+  "fix_type": "image",
+  "fix_action": "Ensure the correct and reachable registry URL is specified in the pod' endpoints. Update 'docker login -u docker-registry-username -p docker-registry-password if needed.' ",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: Ensure the correct and reachable registry URL is specified in the pod' endpoints. Update 'docker login -u docker-registry-username -p docker-registry-password if needed.' 
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:16:35
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-hclvn
+Issue Detected: PodPending
+Action Taken: CONFIG_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "PodPending due to a missing environment variable needed for image pull secrets required by the container",
+  "fix_type": "config",
+  "fixdependent_action": {
+    "add_env_var": [
+      {
+        "name": "K8S_CONTEXT",
+        "value": "$(context)"
+      },
+      {
+        "name": "EKS_ROLE_ARN",
+        "value": "$(aws eks create --name my-cluster cluster-role arn=arn:eks::RoleArn=my-cluster, namespace default, pod resourceName='resource-hog'}"
+      }
+    ]
+  },
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: config
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:16:42
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-mr7cf
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Out of memory error as indicated in the logs or events.",
+  "fix_type": "resources",
+  "fixdependentontheissueType": "OOMKilled",
+  "false": "critical resources for pod needs to be increased."
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: N/A
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:16:52
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-p8lb2
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "OOMKilled due to insufficient memory allocation for the pod",
+  "fix_type": "resources",
+  "fix_action": "Increase resources in the Kubernetes Deployment or PodSpec, specifically allocating more memory (e.g., `memory:` field) and CPU requests (`cpu:` field). Adjust with caution to prevent over-provisioning.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase resources in the Kubernetes Deployment or PodSpec, specifically allocating more memory (e.g., `memory:` field) and CPU requests (`cpu:` field). Adjust with caution to prevent over-provisioning.
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:17:01
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-q8k2v
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:17:11
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-qbx5v
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Out of memory error as indicated by 'OOM' in the logs and the OOMKilled issue",
+  "fix_type": "resources",
+  "fix_action": "Increase resource limits for CPU, Memory (e.g., using cgroups or setting resource requests/limits in pod spec)",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase resource limits for CPU, Memory (e.g., using cgroups or setting resource requests/limits in pod spec)
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:17:25
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-rnsts
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:17:37
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-svz9x
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:17:46
+Namespace: default
+Pod: resource-hog-7fcb5dddcf-w2swh
+Issue Detected: PodPending
+Action Taken: RESTARTED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Unknown - AI diagnosis unavailable",
+  "fix_type": "restart",
+  "fix_action": "Restart pod as fallback",
+  "should_restart": true,
+  "severity": "medium"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: restart
+Fix Action: Restart pod as fallback
+Severity: medium
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:17:55
+Namespace: default
+Pod: wrong-image-app-89c85955b-96v5s
+Issue Detected: PodPending
+Action Taken: IMAGE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "ImagePullBackOff due to inaccessible Docker image",
+  "fix_type": "image",
+  "fix endpoints": [
+    {
+      "action": "Retrieve the correct repository URL for the application's Docker image and update it in Kubernetes manifest file."
+    }
+  ],
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: image
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:18:18
+Namespace: default
+Pod: java-memory-leak-6767786f5d-dmt8j
+Issue Detected: PodPending
+Action Taken: RESOURCES_FIXED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Out of memory error in Java application causing leaks and crashes",
+  "fix_type": "resources",
+  "fixdependent": "Increase the JVM memory limit by setting a higher value for --memory or -mem parameter when running your pod.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: N/A
+Severity: critical
+
+================================================================================
+
+
+================================================================================
+Timestamp: 2026-02-11 13:18:28
+Namespace: default
+Pod: java-memory-leak-d89dd6c7-lgslk
+Issue Detected: PodPending
+Action Taken: MANUAL_RESOURCE_FIX_NEEDED
+
+AI ROOT CAUSE DIAGNOSIS:
+-----------------------
+{
+  "root_cause": "Memory leak in the Java application causing OOM errors during memory allocation",
+  "fix_type": "resources",
+  "fix_action": "Increase pod'throttlingLimit and limits.cpu/limits.pods to ensure sufficient CPU resources for garbage collection along with adjusting resource requests (requests.memory) based on the observed leak size.",
+  "should_restart": true,
+  "severity": "critical"
+}
+
+DIAGNOSTIC DATA:
+---------------
+Describe Info:
+Failed to fetch description
+
+Recent Logs (last 50 lines):
+Failed to fetch logs
+
+RECOMMENDATION:
+--------------
+Fix Type: resources
+Fix Action: Increase pod'throttlingLimit and limits.cpu/limits.pods to ensure sufficient CPU resources for garbage collection along with adjusting resource requests (requests.memory) based on the observed leak size.
+Severity: critical
+
+================================================================================
+
